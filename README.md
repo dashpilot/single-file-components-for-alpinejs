@@ -2,11 +2,12 @@
 Svelte and Vue-inspired single-file components compiler for Alpine.js
 
 ## About
-Inspired by the way Svelte compiles your single file components into browser-friendly javascript, I created a simple compiler for vanilla javascript. You write your code in single-file-component-style, and the build script compiles it to browser-friendly javascript, html and css. It also features live-reload, so every time you save changes to a single file component, the build script compiles your code and runs it. Although this is a basic POC, in its current form it does help you to better organize your code.
+Inspired by the way Svelte compiles your single file components into browser-friendly javascript, I created a simple compiler for Alpinejs. You write your code in single-file-component-style, and the build script compiles it to browser-friendly javascript, html and css. It also features live-reload, so every time you save changes to a single file component, the build script compiles your code and runs it. Although this is a basic POC, in its current form it does help you to better organize your code.
 
 ## How to install?
 
-Clone this repo and run `npm install` and then `npm run dev` to run the example components
+1. run `npx degit https://github.com/dashpilot/alpinejs-single-file-components`
+2. run `npm install` and then `npm run dev` to run the example components
 
 ## How to create a single-file component?
 
