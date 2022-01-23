@@ -1,0 +1,40 @@
+<template>
+  <div class="card" x-init="init()" x-data="card()">
+    <div>
+      <div class="card-header" x-text="$store.item.header"></div>
+      <div class="card-body">
+        <h5 class="card-title" x-text="$store.item.title">Special title treatment</h5>
+        <p class="card-text" x-text="$store.item.content">
+
+        </p>
+        <ul class="list-group mb-3">
+          <template x-for="item in $store.item.list">
+            <li class="list-group-item" x-text="item"></li>
+          </template>
+        </ul>
+        <a href="#" class="btn btn-primary" id="card-button" @click="tryMe()">Try Me</a>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+  function card() {
+    return {
+      items: [],
+      init() {
+        console.log('Card component loaded');
+      },
+      tryMe() {
+        alert('You tried me')
+      }
+    }
+  }
+</script>
+
+<style>
+  #card {
+    margin: 20px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+</style>
