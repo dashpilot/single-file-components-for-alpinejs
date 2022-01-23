@@ -25,23 +25,23 @@ Create a new .html file in `src/components`, with the following structure:
     </template>
 
     <script>
-    // This is where your javascript goes
-    function example() {
-      return {
-        title: "Hello world",
-        init() {
-          console.log('Example component loaded');
+      // This is where your javascript goes
+      function example() {
+        return {
+          title: "Hello world",
+          init() {
+            console.log('Example component loaded');
+          }
         }
       }
-    }
     </script>
 
     <style>
-    /* this is where your CSS goes */
-    .example{
-      border: 1px solid #DDD;
-      padding: 10px;
-    }
+      /* this is where your CSS goes */
+      .example{
+        border: 1px solid #DDD;
+        padding: 10px;
+      }
     </style>
 
 The order of the template-, script- and css- tags is up to your own preference. When you run `npm run dev` or `npm run build` the compiler goes through all the components and automatically splits and minifies/uglifies the JS, CSS and HTML into dist/assets. It also copies index.html to the dist folder.
