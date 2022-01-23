@@ -1,4 +1,4 @@
-# alpinejs-single-file-components
+# Single File Components for Alpine.js
 
 Svelte-inspired single-file components compiler for Alpine.js
 
