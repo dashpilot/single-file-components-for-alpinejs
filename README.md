@@ -10,7 +10,7 @@ Inspired by the way Svelte compiles your single file components into browser-fri
 
 ## How to install?
 
-1.  run `npx degit https://github.com/dashpilot/alpinejs-single-file-components`
+1.  run `npx degit https://github.com/dashpilot/single-file-components-for-alpinejs`
 2.  run `npm install` and then `npm run dev` to run the example components
 
 ## How to create a single-file component?
@@ -18,15 +18,30 @@ Inspired by the way Svelte compiles your single file components into browser-fri
 Create a new .html file in `src/components`, with the following structure:
 
     <template>
-    <!-- This is where the html of your component goes -->
+      <!-- This is where the html of your component goes -->
+      <div class="example" x-init="init()" x-data="example()">
+        <div x-text="title"></div>
+      </div>
     </template>
 
     <script>
     // This is where your javascript goes
+    function example() {
+      return {
+        title: "Hello world",
+        init() {
+          console.log('Example component loaded');
+        }
+      }
+    }
     </script>
 
     <style>
     /* this is where your CSS goes */
+    .example{
+      border: 1px solid #DDD;
+      padding: 10px;
+    }
     </style>
 
 The order of the template-, script- and css- tags is up to your own preference. When you run `npm run dev` or `npm run build` the compiler goes through all the components and automatically splits and minifies/uglifies the JS, CSS and HTML into dist/assets. It also copies index.html to the dist folder.
