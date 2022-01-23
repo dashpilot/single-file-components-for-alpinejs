@@ -1,8 +1,10 @@
 # alpinejs-single-file-components
-Svelte and Vue-inspired single-file components compiler for Alpine.js
+Svelte-inspired single-file components compiler for Alpine.js
 
 ## About
-Inspired by the way Svelte compiles your single file components into browser-friendly javascript, I created a simple compiler for Alpinejs. You write your code in single-file-component-style, and the build script compiles it to browser-friendly javascript, html and css. It also features live-reload, so every time you save changes to a single file component, the build script compiles your code and runs it. Although this is a basic POC, in its current form it does help you to better organize your code.
+I love the simplicity of Alpine.js, but on bigger projects it can become a challenge to keep your code organized and modular. 
+
+Inspired by the way Svelte compiles your single file components into browser-friendly javascript, I created a simple compiler for Alpinejs. You write your code in single-file-component-style, and the build script compiles it to browser-friendly javascript, html and css. It also features **live-reload**, so every time you save changes to a single file component, the build script compiles your code and runs it. Although this is a basic POC, in its current form it does help you to better organize your code.
 
 ## How to install?
 
@@ -28,6 +30,7 @@ Create a new .html file in `src/components`, with the following structure:
 ```
 
 The order of the template-, script- and css- tags is up to your own preference. When you run `npm run dev` or `npm run build` the compiler goes through all the components and automatically splits and minifies/uglifies the JS, CSS and HTML into dist/assets. It also copies index.html to the dist folder.
+
 
 ## What it's not
 
