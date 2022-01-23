@@ -13,8 +13,12 @@
 
 <body>
 
-  <div id="notify"></div>
-  <div id="card"></div>
+  <!-- load the components -->
+  <notify></notify>
+
+  <div class="container">
+    <card></card>
+  </div>
 
   <script>
     document.addEventListener('alpine:init', () => {
@@ -22,7 +26,7 @@
         header: "Example card component",
         title: "Data via Alpine.js store",
         content: "This data is dynamically loaded from the global Alpine Store.",
-        list: ['a', 'dynamic', 'list']
+        list: ['example', 'dynamic', 'list']
       })
     })
   </script>

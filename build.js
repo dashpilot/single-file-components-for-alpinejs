@@ -37,9 +37,11 @@ function extractTags(filepath, data) {
 
   const root = parse(file);
   data.template +=
-    'document.querySelector("#' + filename + '").innerHTML = `' +
+    'document.querySelectorAll("' + filename + '").forEach(function(e){' +
+    'e.innerHTML = `' +
     root.querySelector("template").innerHTML +
-    "`\n";
+    '`' +
+    "})\n";
   data.script += root.querySelector("script").text + "\n";
   data.style += root.querySelector("style").text;
 

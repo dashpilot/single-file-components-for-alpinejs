@@ -31,11 +31,13 @@ Create a new .html file in `src/components`, with the following structure:
 
 The order of the template-, script- and css- tags is up to your own preference. When you run `npm run dev` or `npm run build` the compiler goes through all the components and automatically splits and minifies/uglifies the JS, CSS and HTML into dist/assets. It also copies index.html to the dist folder.
 
+To load a component on the page, create a custom element in index.html that corresponds to the filename of your component. So if your component is called `card.html`, create a custom element `<card></card>` in index.html. You can also load multiple instances of the component on the page, without duplicating the javascript or CSS.
+
 Take a look at `components/card.html` to see how well this concept actually fits Alpinejs: each component has its own data-'controller', while sharing data between components is easy via the global store (in index.html). And of course, all templating-directives are available to you (x-for, x-if, x-text, etc.)
 
 ## What it's not
 
-This script is simply meant to help you write code in a more modular way, but it doesn't feature the wealth of extras Svelte offers (template language, two-way binding, CSS-scoping etc.). Let me know if there are any features/improvements you'd like to see.
+This script is simply meant to help you write Alpine.js code in a more modular way, but isn't a module bundler or js framework. Let me know if there are any features/improvements you'd like to see.
 
 ## Todo
 

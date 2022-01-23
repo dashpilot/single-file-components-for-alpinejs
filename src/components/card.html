@@ -1,12 +1,10 @@
 <template>
-  <div class="card" x-init="init()" x-data="card()">
+  <div class="card mb-3" x-init="init()" x-data="card()">
     <div>
       <div class="card-header" x-text="$store.item.header"></div>
       <div class="card-body">
         <h5 class="card-title" x-text="$store.item.title">Special title treatment</h5>
-        <p class="card-text" x-text="$store.item.content">
-
-        </p>
+        <p class="card-text" x-text="$store.item.content"></p>
         <ul class="list-group mb-3">
           <template x-for="item in $store.item.list">
             <li class="list-group-item" x-text="item"></li>
