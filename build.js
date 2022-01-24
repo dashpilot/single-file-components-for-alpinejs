@@ -45,7 +45,7 @@ function extractTags(filepath, data) {
     data.template +=
       'document.querySelectorAll("' + filename + '").forEach(function(e){' +
       'e.innerHTML = `' +
-      root.querySelector("template").innerHTML +
+      root.querySelector("template").innerHTML.replace(/\s\s+/g, ' ') +
       '`' +
       "})\n";
   }
