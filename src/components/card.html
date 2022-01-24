@@ -5,6 +5,7 @@
       <div class="card-body">
         <h5 class="card-title" x-text="$store.item.title">Special title treatment</h5>
         <p class="card-text" x-text="$store.item.content"></p>
+        <br>
         <ul class="list-group mb-3">
           <template x-for="item in $store.item.list">
             <li class="list-group-item" x-text="item"></li>
