@@ -62,10 +62,6 @@ Take a look at `components/card.html` to see how well this concept actually fits
 
 This script is simply meant to help you write Alpine.js code in a more modular way, but isn't a module bundler or js framework. Let me know if there are any features/improvements you'd like to see.
 
-## Todo
-
--   might switch out terser and cleancss for node-minify
-
 ## Press the :star: button
 
 Don't forget to press the :star: button to let me know I should continue improving this project.
